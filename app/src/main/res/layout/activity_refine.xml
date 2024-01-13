@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RefineActivity">
+
+    <RelativeLayout
+        android:id="@+id/refineStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/myPrimaryColor">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/backArrow"
+            android:text="Refine"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/khula_semibold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/availabilityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/refineStatusBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select your availability"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/myPrimaryColor"
+            android:fontFamily="@font/khula_semibold"
+            android:paddingStart="15dp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/availabilitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/group_11"
+            android:foregroundTint="@color/white"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:popupBackground="@color/white"
+            android:textColor="@color/myPrimaryColor"
+            android:textSize="20sp"
+            android:layoutMode="opticalBounds"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/availabilityLayout"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add your Status"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/myPrimaryColor"
+            android:fontFamily="@font/khula_semibold"
+            android:paddingStart="15dp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/rectangle_11"
+              android:layout_marginStart="25dp"
+              android:layout_marginEnd="25dp"
+              android:layout_marginTop="5dp"
+              android:gravity="top"
+              android:textColor="@color/myPrimaryColor"
+              android:textSize="14sp"
+              android:textCursorDrawable="@drawable/custom_cursor"
+              android:paddingTop="5dp"
+              android:paddingStart="10dp"
+              android:maxLength="250"
+              android:theme="@style/HandleColorChanger"
+              android:textColorHighlight="@color/myTertiaryColor"
+              android:text="Hi community! I am open to new connections ”😊”"
+              tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/distanceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/statusLayout"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Hyper local Distance"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/myPrimaryColor"
+            android:fontFamily="@font/khula_semibold"
+            android:paddingStart="15dp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/firstSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:labelBehavior="visible"
+                app:thumbColor="#164868"
+                app:labelStyle="@style/tooltip"
+                app:tickColor="@android:color/transparent"
+                app:trackColorActive="@color/myPrimaryColor"
+                app:trackColorInactive="@color/tabInactiveText"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:value="50"
+                android:valueFrom="1"
+                android:valueTo="100"
+                android:stepSize="1"
+                >
+
+            </com.google.android.material.slider.Slider>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Km"
+                android:fontFamily="@font/khula"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/firstSlider"
+                android:layout_marginStart="25dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/myPrimaryColor"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 Km"
+                android:fontFamily="@font/khula"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/firstSlider"
+                android:layout_marginEnd="25dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/myPrimaryColor"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/purposeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distanceLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Purpose"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/myPrimaryColor"
+            android:fontFamily="@font/khula_semibold"
+            android:paddingStart="15dp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <LinearLayout
+            android:id="@+id/firstRowButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                app:cardBackgroundColor="@color/primaryShaded"
+                app:cardCornerRadius="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coffee"
+                    android:fontFamily="@font/khula"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="15dp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:cardBackgroundColor="@color/primaryShaded"
+                app:cardCornerRadius="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business"
+                    android:fontFamily="@font/khula"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="15dp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:strokeColor="@color/primaryShaded"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hobbies"
+                    android:fontFamily="@font/khula"
+                    android:textColor="@color/primaryShaded"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="15dp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondRowButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                app:cardBackgroundColor="@color/primaryShaded"
+                app:cardCornerRadius="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friendship"
+                    android:fontFamily="@font/khula"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="15dp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:strokeColor="@color/primaryShaded"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movies"
+                    android:fontFamily="@font/khula"
+                    android:textColor="@color/primaryShaded"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="15dp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:strokeColor="@color/primaryShaded"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dining"
+                    android:fontFamily="@font/khula"
+                    android:textColor="@color/primaryShaded"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="15dp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thirdRowButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                app:strokeColor="@color/primaryShaded"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dating"
+                    android:fontFamily="@font/khula"
+                    android:textColor="@color/primaryShaded"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="15dp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:strokeColor="@color/primaryShaded"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matrimony"
+                    android:fontFamily="@font/khula"
+                    android:textColor="@color/primaryShaded"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="15dp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/purposeLayout"
+        app:cardBackgroundColor="@color/primaryShaded"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save &amp; Explore"
+            android:textSize="18sp"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="30dp"
+            android:fontFamily="@font/khula_semibold"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/initialsCardView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="10dp"
+        app:strokeColor="@android:color/transparent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#B8C5CD">
+
+        <TextView
+            android:id="@+id/businessInitials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RK"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textAlignment="inherit"
+            android:textSize="32sp"
+            android:fontFamily="@font/khula_semibold"
+            android:textColor="@color/primaryShaded"
+            android:padding="10dp"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profileCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:strokeColor="@color/tabInactiveText"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="25dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp"
+        app:strokeWidth="1dp"
+        app:cardCornerRadius="16dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            >
+
+            <TextView
+                android:id="@+id/invitationText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Invite"
+                android:textAllCaps="true"
+                android:textAlignment="textEnd"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/myPrimaryColor"
+                android:textSize="16sp"
+                android:fontFamily="@font/khula_semibold"
+                tools:ignore="HardcodedText" />
+
+
+            <LinearLayout
+                android:id="@+id/intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/invitationText2">
+
+                <TextView
+                    android:id="@+id/businessNameView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rupali Kokate"
+                    android:textSize="16sp"
+                    android:paddingStart="60dp"
+                    android:fontFamily="@font/khula_semibold"
+                    android:textColor="@color/myPrimaryColor"
+                    android:layout_marginTop="2dp"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/businessRangeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nanded | Within 4.2 KM"
+                    android:textSize="14sp"
+                    android:paddingStart="60dp"
+                    android:fontFamily="@font/khula_light"
+                    android:textColor="@color/primaryShaded"
+                    android:layout_marginTop="2dp"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:paddingTop="2dp"
+                    android:paddingStart="60dp"
+                    android:src="@drawable/progress_bar"
+                    tools:ignore="RtlSymmetry,ImageContrastCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logosView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/intro"
+                android:layout_centerHorizontal="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    app:cardBackgroundColor="@color/myPrimaryColor"
+                    app:cardCornerRadius="50dp"
+                    >
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_phone"
+                        android:padding="5dp"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    app:cardBackgroundColor="@color/myPrimaryColor"
+                    app:cardCornerRadius="50dp"
+                    >
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_contact_add"
+                        android:layout_marginStart="2dp"
+                        android:padding="10dp"/>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logosView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/businessView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Student | 0 years sof experience"
+                    android:textSize="16sp"
+                    android:paddingStart="20dp"
+                    android:fontFamily="@font/khula_semibold"
+                    android:textColor="@color/myPrimaryColor"
+                    android:layout_marginTop="2dp"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/businessStat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hi community! I am available at your\nservice!"
+                    android:textSize="14sp"
+                    android:paddingStart="20dp"
+                    android:fontFamily="@font/khula_light"
+                    android:textColor="@color/primaryShaded"
+                    android:layout_marginTop="2dp"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

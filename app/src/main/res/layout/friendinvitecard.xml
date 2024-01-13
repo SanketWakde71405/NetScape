@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/initialsCardView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="10dp"
+        app:strokeColor="@android:color/transparent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#B8C5CD">
+
+        <TextView
+            android:id="@+id/initialsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SG"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textAlignment="inherit"
+            android:textSize="32sp"
+            android:fontFamily="@font/khula_semibold"
+            android:textColor="@color/primaryShaded"
+            android:padding="10dp"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profileCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:strokeColor="@color/tabInactiveText"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="25dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp"
+        app:strokeWidth="1dp"
+        app:cardCornerRadius="16dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            >
+
+            <TextView
+                android:id="@+id/invitationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Invite"
+                android:textAllCaps="true"
+                android:textAlignment="textEnd"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/myPrimaryColor"
+                android:textSize="16sp"
+                android:fontFamily="@font/khula_semibold"
+                tools:ignore="HardcodedText" />
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_centerHorizontal="true"
+              android:layout_marginBottom="5dp"
+              android:layout_below="@id/invitationText">
+
+              <TextView
+                  android:id="@+id/nameView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Shreyash Gaikwad"
+                  android:textSize="16sp"
+                  android:paddingStart="60dp"
+                  android:fontFamily="@font/khula_semibold"
+                  android:textColor="@color/myPrimaryColor"
+                  android:layout_marginTop="2dp"
+                  android:textAlignment="textStart"
+                  tools:ignore="HardcodedText,RtlSymmetry" />
+
+              <TextView
+                  android:id="@+id/jobView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Nanded | Student"
+                  android:textSize="14sp"
+                  android:paddingStart="60dp"
+                  android:fontFamily="@font/khula_light"
+                  android:textColor="@color/primaryShaded"
+                  android:layout_marginTop="2dp"
+                  android:textAlignment="textStart"
+                  tools:ignore="HardcodedText,RtlSymmetry" />
+
+              <TextView
+                  android:id="@+id/distanceView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Within 1.1 KM"
+                  android:textSize="14sp"
+                  android:paddingStart="60dp"
+                  android:fontFamily="@font/khula_semibold"
+                  android:textColor="@color/myPrimaryColor"
+                  android:layout_marginTop="2dp"
+                  android:textAlignment="textStart"
+                  tools:ignore="HardcodedText,RtlSymmetry" />
+
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:importantForAccessibility="no"
+                  android:paddingTop="2dp"
+                  android:paddingStart="60dp"
+                  android:src="@drawable/progress_bar"
+                  tools:ignore="RtlSymmetry,ImageContrastCheck" />
+
+              <TextView
+                  android:id="@+id/purposeView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Coffee | Business | Friendship"
+                  android:textSize="14sp"
+                  android:paddingStart="25dp"
+                  android:fontFamily="@font/khula_semibold"
+                  android:textColor="@color/myPrimaryColor"
+                  android:layout_marginTop="2dp"
+                  android:textAlignment="textStart"
+                  tools:ignore="HardcodedText,RtlSymmetry" />
+
+              <TextView
+                  android:id="@+id/statusView"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Hi community! I am open to new \nconnections ”😊”"
+                  android:textSize="12sp"
+                  android:paddingStart="25dp"
+                  android:fontFamily="@font/khula_light"
+                  android:textColor="@color/myPrimaryColor"
+                  android:layout_marginTop="2dp"
+                  android:textAlignment="textStart"
+                  tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+          </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

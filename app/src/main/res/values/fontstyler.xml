@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><style name="customfontstyle" parent="@android:style/TextAppearance.Small">
+<item name="android:fontFamily">@font/khula_semibold</item>
+<item name="android:textSize">18sp</item>
+</style>
+
+    <style name="customfontstyle1" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/khula</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="HandleColorChanger">
+        <item name="colorControlActivated">@color/mySecondaryColor</item>
+    </style>
+
+    <style name="tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="shapeAppearanceOverlay">@style/tooltipShOverylay</item>
+        <item name="backgroundTint">#164868</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="tooltipShOverylay">
+        <item name="cornerSize">5%</item>
+
+    </style>
+
+    <style name="fab_3_rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

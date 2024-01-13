@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MerchantFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/merchant_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="10dp"
+                android:paddingStart="10dp"
+                android:hint="Search"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/myPrimaryColor"
+                android:textColorHint="@color/myTertiaryColor"
+                android:fontFamily="@font/khula"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:background="@drawable/searchbarbackground"
+                android:imeOptions="actionSearch"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_filter"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/emptyImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/emptylist"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/merchant_search_bar"
+            android:layout_marginTop="50dp"/>
+        <LinearLayout
+            android:id="@+id/emptyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emptyImage"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your explore list is"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/khula_semibold"
+                    android:textColor="@color/myPrimaryColor"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EMPTY"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/khula_semibold"
+                    android:textColor="#FFCD46"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Sorry, we could not find any user near you.\nTry increasing your search radius."
+                android:textColor="@color/myPrimaryColor"
+                android:fontFamily="@font/khula"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emptyText"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@color/primaryShaded"
+            app:cardCornerRadius="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INCREASE RADIUS"
+                android:paddingHorizontal="50dp"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/khula"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

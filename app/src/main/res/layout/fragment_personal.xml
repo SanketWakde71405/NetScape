@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PersonalFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:ignore="UselessParent">
+
+       <LinearLayout
+           android:id="@+id/search_bar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp"
+           android:gravity="center_horizontal"
+           android:layout_alignParentTop="true"
+           android:layout_centerHorizontal="true"
+           android:orientation="horizontal">
+
+           <EditText
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:background="@drawable/searchbarbackground"
+               android:drawableStart="@drawable/ic_search"
+               android:drawablePadding="10dp"
+               android:fontFamily="@font/khula"
+               android:hint="Search"
+               android:imeOptions="actionSearch"
+               android:paddingStart="10dp"
+               android:singleLine="true"
+               android:textColor="@color/myPrimaryColor"
+               android:textColorHint="@color/myTertiaryColor"
+               android:textCursorDrawable="@drawable/custom_cursor"
+               android:textSize="18sp"
+               tools:ignore="HardcodedText,RtlSymmetry,TouchTargetSizeCheck"
+               android:inputType="text"
+               android:importantForAutofill="no" />
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="5dp"
+               android:src="@drawable/ic_filter"
+               tools:ignore="ContentDescription" />
+
+       </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/search_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profileRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:scrollbars="vertical"
+                    android:background="@android:color/transparent"
+                    android:padding="10dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/primaryShaded"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/baseline_add_24"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            app:tint="@android:color/white"
+            tools:ignore="ContentDescription,RelativeOverlap,SpeakableTextPresentCheck">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/notesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/floatingButton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#FFCD46"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            android:src="@drawable/ic_notes"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            app:tint="@color/primaryShaded"
+            android:tintMode="@android:integer/config_mediumAnimTime"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/jobsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/notesButton"
+            android:layout_marginBottom="10dp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/briefcase"
+            app:tint="@color/primaryShaded"
+            android:backgroundTint="#FFCD46"
+            android:focusable="true"
+            tools:ignore="ContentDescription,UnusedAttribute">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/groupsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/jobsButton"
+            android:layout_marginBottom="10dp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_hashtag"
+            app:tint="@color/primaryShaded"
+            android:backgroundTint="#FFCD46"
+            android:focusable="true"
+            tools:ignore="ContentDescription,UnusedAttribute">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/businessButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/groupsButton"
+            android:layout_marginBottom="10dp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_business_card"
+            app:tint="@color/primaryShaded"
+            android:backgroundTint="#FFCD46"
+            android:focusable="true"
+            tools:ignore="ContentDescription,UnusedAttribute">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/shoppingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/businessButton"
+            android:layout_marginBottom="10dp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_shopping_bag"
+            app:tint="@color/primaryShaded"
+            android:backgroundTint="#FFCD46"
+            android:focusable="true"
+            tools:ignore="ContentDescription,UnusedAttribute">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/matrimonyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/shoppingButton"
+            android:layout_marginBottom="10dp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/rings"
+            app:tint="@color/primaryShaded"
+            android:backgroundTint="#FFCD46"
+            android:focusable="true"
+            tools:ignore="ContentDescription,UnusedAttribute">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/matrimonyButton"
+            android:layout_marginBottom="10dp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_heart"
+            app:tint="@color/primaryShaded"
+            android:backgroundTint="#FFCD46"
+            android:focusable="true"
+            tools:ignore="ContentDescription,UnusedAttribute">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

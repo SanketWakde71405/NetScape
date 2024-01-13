@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    tools:ignore="UnusedAttribute">
+
+    <RelativeLayout
+        android:id="@+id/frame_2"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="@color/myPrimaryColor"
+        android:paddingTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/menu_opener"
+            android:src="@drawable/ic_menu"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/menu_opener"
+            android:layout_alignParentTop="true"
+            android:id="@+id/profileText"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/khula_semibold"
+                android:text="Howdy Richard Smith!!"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:paddingEnd="10dp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_locatepin"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/khula_light"
+                    android:paddingEnd="20dp"
+                    android:text="Delhi, India"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/refineButton"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/refineButtonIcon"
+                android:src="@drawable/ic_checklist"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/khula"
+                android:text="Refine"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:letterSpacing="0.2"
+                tools:ignore="HardcodedText,SmallSp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mySecondaryColor"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/tabInactiveText"
+        android:layout_centerHorizontal="true"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextAppearance="@style/customfontstyle"
+        app:tabIndicatorFullWidth="true"
+        android:layout_below="@+id/frame_2">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Merchant"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabMode"
+        android:layout_above="@+id/bottomAppBar"
+        android:layout_centerHorizontal="true"
+        />
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:elevation="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/bottomAppBar"
+        android:background="@drawable/shadow"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomAppBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/white"
+        app:elevation="25dp"
+        app:itemIconSize="25dp"
+        app:itemTextAppearanceInactive="@style/customfontstyle1"
+        app:itemTextAppearanceActive="@style/customfontstyle1"
+        app:itemActiveIndicatorStyle="@drawable/bottom_navigation_item"
+        app:itemTextColor="@drawable/bottom_navigation_item"
+        app:itemIconTint="@drawable/bottom_navigation_item"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>
